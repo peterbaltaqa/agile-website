@@ -4,7 +4,7 @@ from db import table
 
 
 app = Flask(__name__)
-app.secret_key = '4d807908c92fd04afceb10f7dc461f98ae6bbcc9c5dfb13fd7f9e0502fdf5968'
+app.secret_key = ''
 
 # Index Page
 @app.route("/")

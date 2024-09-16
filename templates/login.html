@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</header>
+
+<body>
+    <form method="post">
+        <label>Username</label> <br> <input class="textinput" size="50" name="usr"> <br><br>
+        <label>Password</label> <br> <input class="textinput" size="50" type="password" name="pw"> <br><br>
+        <button type="submit">Log in</button>
+
+        {% if loginfail %}
+            <p class="invalid">Invalid Username or Password</p>
+        {% endif %}
+    </form> 
+    
+</body>

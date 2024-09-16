@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</header>
+
+<body>
+
+     <a class="login" href="/login">Log out</a>
+
+    <h1>HELP DESK TICKETS</h1>
+
+    <form method="post">
+        <button name = "add">Add</button>
+
+        {% if mode == "edit" %}
+            <button name = "save">Save</button>
+        {% else %}
+            <button name = "edit">Edit</button>
+        {% endif %}
+
+        <button name = "delete">Delete</button>
+    </form>
+
+    <br><br>
+    
+    <table>
+        <tr>
+            <th></th>
+            <th>Ticket ID</th>  
+            <th>Caller</th>
+            <th>Details</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Creation Timestamp</th>
+        </tr>
+
+        {% for i in table %}
+            <tr>
+                <td><input type="checkbox"></td>
+
+                {% for j in i %}
+
+                    {% if mode == "edit" %}
+                        <td><input value = "{{ j }}" onfocusout="upload()"></td>
+                    {% else %}
+                        <td><input value = "{{ j }}" disabled></td>
+                    {% endif %}
+
+                {% endfor %} 
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+
+<script>
+    function upload()
+    {
+        
+    }
+
+</script>

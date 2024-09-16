@@ -1,0 +1,47 @@
+body, input {
+  text-align: center;
+  background-color: white;
+  font-size: medium;
+}
+
+form {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  line-height: 1.9;
+  
+}
+
+table {
+  width: 100%;
+  border-style: solid;
+}
+
+
+button {
+  background-color: lightgray;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+  background-color: darkgray  ;
+}
+
+input {
+  font-family: 'Times New Roman', Times, serif;
+
+  width: 90%;
+}
+
+.login {
+  position: absolute;
+  margin: 10px;
+  right: 0; top: 0;
+}
+
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+
